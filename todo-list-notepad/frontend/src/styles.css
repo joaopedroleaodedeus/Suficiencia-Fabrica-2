@@ -1,0 +1,292 @@
+:root {
+  --orange: #FFB366;
+  --orange-dark: #F59A3E;
+  --black: #222222;
+  --white: #FFFFFF;
+  --paper: #FFF8F0;
+  --border: #E8D9C8;
+  --error: #B3261E;
+  --success: #1E6B34;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--orange);
+  color: var(--black);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange-dark);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.greeting {
+  margin-top: 4px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--black);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Área da lista com linhas pautadas, estilo bloco de notas */
+.notepad {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 47px,
+    var(--border) 47px,
+    var(--border) 48px
+  );
+}
+
+.toolbar {
+  margin-bottom: 12px;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: var(--white);
+  font-weight: 600;
+}
+
+.message.error {
+  color: var(--error);
+}
+
+.message.success {
+  color: var(--success);
+}
+
+.btn {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-danger {
+  background: var(--white);
+  color: var(--error);
+}
+
+.btn-link {
+  border: none;
+  background: none;
+  padding: 6px 0;
+  text-decoration: underline;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--black);
+  width: 100%;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0;
+}
+
+.auth-card h1 {
+  margin-bottom: 16px;
+}
+
+.auth-switch {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  min-height: 48px;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.task-title {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.task-date,
+.muted,
+.empty {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.empty {
+  padding: 8px 0;
+  opacity: 1;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.task-details .task-date {
+  margin-bottom: 16px;
+}
+
+.task-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 8px 0 12px;
+}
+
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions {
+    justify-content: stretch;
+  }
+
+  .task-actions .btn,
+  .form-actions .btn {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
