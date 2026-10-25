@@ -65,7 +65,7 @@ Para parar, clique em cada terminal e pressione **Ctrl + C**.
 |---|---|
 | `npm não é reconhecido` | O Node.js não está instalado, ou o VS Code foi aberto antes da instalação. Instale o Node.js, feche todas as janelas do VS Code e abra de novo. |
 | `a execução de scripts foi desabilitada` (PowerShell) | Use `npm.cmd` no lugar de `npm` (ex.: `npm.cmd start`) ou rode uma vez `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`. |
-| A tela mostra "Não foi possível conectar ao servidor." | O backend não está rodando. Inicie-o (passo 5) antes do frontend. |
+| Login ou cadastro mostra "Erro inesperado." | O backend não está rodando. Inicie-o (passo 5) e tente de novo. |
 | Porta 3001 ou 5173 em uso | Feche o terminal que já está executando a aplicação. |
 
 ## Validação manual
@@ -78,7 +78,7 @@ Com a aplicação rodando, confira os requisitos da prova:
 | 2 | Criar outra conta com o mesmo e-mail | Erro "E-mail já cadastrado." |
 | 3 | Fazer login com senha errada | Erro "E-mail ou senha inválidos." |
 | 4 | Fazer login correto | Abre a tela de tarefas |
-| 5 | Criar tarefa com título vazio ou só com espaços | Erro "O título é obrigatório." |
+| 5 | Criar tarefa com título só com espaços | Erro "O título é obrigatório." (com o campo vazio, o navegador pede para preenchê-lo) |
 | 6 | Criar duas ou três tarefas | Aparecem na ordem em que foram criadas |
 | 7 | Usar **Ver**, **Editar** e **Excluir** | Detalhes exibidos, alteração salva e exclusão após confirmação |
 | 8 | Isolamento: entrar com um segundo usuário em uma **janela anônima** | O segundo usuário não vê as tarefas do primeiro |
@@ -176,3 +176,6 @@ https://joaopedrofernandes.atlassian.net/jira/software/projects/TSF2/list?jql=pr
 Criei um filtro que seleciona as duas sprints finalizadas com cada card e suas devidas horas usadas.
 Como essas sprints foram finalizadas, elas não se encontram no quadro ou backlog, pois já foram concluídas.
 Para verificar por sprints, é só utilizar o botão que vai estar em azul chamado "Filtrar" e filtrar pelas sprints.
+
+Foi criado também um painel para verificar as sprints com mais facilidade:
+https://joaopedrofernandes.atlassian.net/jira/dashboards/10001
