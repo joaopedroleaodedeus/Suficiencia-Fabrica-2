@@ -168,3 +168,11 @@ A aplicação é executada localmente, o que a prova permite. Para publicar, use
 ## Gestão do projeto
 
 Board Kanban no Jira com duas Sprints de 6 horas: https://joaopedrofernandes.atlassian.net/jira/software/projects/TSF2/summary
+
+O resumo das sprints podem se encontrar aqui:
+
+https://joaopedrofernandes.atlassian.net/jira/software/projects/TSF2/list?jql=project%20%3D%20TSF2%20AND%20Sprint%20in%20(1%2C%202)%20ORDER%20BY%20cf%5B10019%5D%20ASC
+
+Criei um filtro que seleciona as duas sprints finalizadas com cada card e suas devidas horas usadas.
+Como essas sprints foram finalizadas, elas não se encontram no quadro ou backlog, pois já foram concluídas.
+Para verificar por sprints, é só utilizar o botão que vai estar em azul chamado "Filtrar" e filtrar pelas sprints.
